@@ -78,19 +78,19 @@ export function ExpertiseSection() {
       >
         {/* Founder Quote — spans 2 cols */}
         <motion.div variants={slideInFromLeft} className="md:col-span-2">
-          <Card variant="glass" className="h-full flex flex-col justify-center">
-            <blockquote className="text-xl md:text-2xl font-heading italic text-primary-white leading-relaxed mb-6">
+          <Card variant="glass" className="h-full flex flex-col justify-center float-element">
+            <blockquote className="text-xl md:text-2xl font-heading italic text-primary-white leading-relaxed mb-6 text-glow">
               &ldquo;{founderQuote.text}&rdquo;
             </blockquote>
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-full bg-gradient-to-br from-accent-gold to-accent-gold/60 flex items-center justify-center text-deep-blue font-bold text-lg">
+              <div className="h-12 w-12 rounded-full bg-gradient-to-br from-accent-gold to-accent-gold/60 flex items-center justify-center text-deep-blue font-bold text-lg float-element">
                 {founderQuote.name.charAt(0)}
               </div>
               <div>
-                <div className="font-semibold text-primary-white">
+                <div className="font-semibold text-primary-white text-glow">
                   {founderQuote.name}
                 </div>
-                <div className="text-sm text-muted">{founderQuote.role}</div>
+                <div className="text-sm text-muted text-glow">{founderQuote.role}</div>
               </div>
             </div>
           </Card>

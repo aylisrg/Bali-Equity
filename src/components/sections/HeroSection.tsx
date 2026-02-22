@@ -41,7 +41,7 @@ export function HeroSection() {
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
-        className="relative z-10 mx-auto max-w-5xl px-4 text-center md:px-8"
+        className="relative z-10 mx-auto max-w-5xl px-4 text-center md:px-8 float-element"
       >
         {/* Logo / Brand */}
         <motion.div variants={fadeInUp} className="mb-8">
@@ -53,7 +53,7 @@ export function HeroSection() {
         {/* H1 */}
         <motion.h1
           variants={fadeInUp}
-          className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] text-primary-white"
+          className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] text-primary-white text-glow"
         >
           Bali — as a Strategic Asset
           <span className="block text-accent-gold">
@@ -64,7 +64,7 @@ export function HeroSection() {
         {/* Subtitle */}
         <motion.p
           variants={fadeInUp}
-          className="mx-auto mt-6 max-w-3xl text-lg md:text-xl text-muted leading-relaxed"
+          className="mx-auto mt-6 max-w-3xl text-lg md:text-xl text-muted leading-relaxed text-glow"
         >
           We build liquidity portfolios backed by 37,000+ Airbnb listing
           analytics. Our managed properties consistently perform in the top 10%.

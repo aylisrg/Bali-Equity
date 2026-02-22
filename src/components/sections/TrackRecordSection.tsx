@@ -69,35 +69,50 @@ export function TrackRecordSection() {
             </div>
 
             {/* Details */}
-            <div>
-              <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary-white mb-2">
+            <div className="float-element">
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary-white mb-2 text-glow">
                 {currentCase.title}
               </h3>
-              <p className="text-muted mb-6">{currentCase.location}</p>
+              <p className="text-muted mb-6 text-glow">{currentCase.location}</p>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="rounded-xl bg-white/5 p-4">
+                <motion.div 
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="rounded-xl bg-white/5 p-4"
+                >
                   <div className="text-sm text-muted mb-1">Entry Price</div>
-                  <div className="text-xl font-bold text-primary-white">
+                  <div className="text-xl font-bold text-primary-white text-glow">
                     {formatCurrency(currentCase.entryPrice)}
                   </div>
-                </div>
-                <div className="rounded-xl bg-white/5 p-4">
+                </motion.div>
+                <motion.div 
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="rounded-xl bg-white/5 p-4"
+                >
                   <div className="text-sm text-muted mb-1">Annual ROI</div>
-                  <div className="text-xl font-bold text-accent-gold">
+                  <div className="text-xl font-bold text-accent-gold text-glow">
                     {currentCase.annualROI}%
                   </div>
-                </div>
+                </motion.div>
               </div>
 
-              <div className="rounded-xl border border-accent-gold/20 bg-accent-gold/5 p-4">
-                <div className="text-sm text-accent-gold font-semibold">
+              <motion.div 
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="rounded-xl border border-accent-gold/20 bg-accent-gold/5 p-4"
+              >
+                <div className="text-sm text-accent-gold font-semibold text-glow">
                   Status
                 </div>
-                <div className="text-primary-white mt-1">
+                <div className="text-primary-white mt-1 text-glow">
                   {currentCase.status}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </AnimatePresence>
