@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, ChevronDown } from "lucide-react";
+import { MessageCircle, ChevronDown, ExternalLink, Star } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { whatsappUrl, SECTION_IDS } from "@/lib/constants";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
@@ -43,10 +43,24 @@ export function HeroSection() {
         className="relative z-10 mx-auto max-w-5xl px-4 text-center md:px-8"
       >
         {/* Logo / Brand */}
-        <motion.div variants={fadeInUp} className="mb-8">
+        <motion.div variants={fadeInUp} className="mb-8 flex flex-col items-center gap-4">
           <span className="inline-block text-accent-gold text-sm md:text-base font-semibold tracking-[0.3em] uppercase">
             Equity Bali
           </span>
+          {/* Airbnb Badge */}
+          <a
+            href="https://www.airbnb.ae/users/profile/1463776046956512996?previous_page_name=PdpHomeMarketplace"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-gold/15 border border-accent-gold/40 hover:border-accent-gold/80 transition-all duration-300 group"
+          >
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 text-accent-gold fill-accent-gold" />
+              <span className="text-accent-gold font-bold text-sm">4.9</span>
+            </div>
+            <span className="text-accent-gold text-sm font-semibold">Superhost</span>
+            <ExternalLink className="h-3.5 w-3.5 text-accent-gold/60 group-hover:text-accent-gold transition-colors" />
+          </a>
         </motion.div>
 
         {/* H1 */}
