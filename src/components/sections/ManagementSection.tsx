@@ -10,7 +10,7 @@ import { slideInFromLeft, slideInFromRight } from "@/lib/animations";
 
 function PhoneDashboard() {
   return (
-    <div className="relative mx-auto w-[260px] md:w-[280px]">
+    <div className="relative mx-auto w-full max-w-[260px] md:max-w-[280px] px-4 sm:px-0">
       {/* Phone Frame */}
       <div className="rounded-[2.5rem] border-4 border-white/20 bg-deep-blue p-2 shadow-2xl shadow-deep-blue/80">
         {/* Notch */}
@@ -99,7 +99,7 @@ export function ManagementSection() {
         subtitle="Transparent reporting 24/7. Receipts, occupancy, expenses — all in one dashboard."
       />
 
-      <div className="grid gap-12 md:grid-cols-2 items-center">
+      <div className="grid gap-12 md:grid-cols-2 items-center overflow-hidden">
         {/* Text */}
         <motion.div
           variants={slideInFromLeft}

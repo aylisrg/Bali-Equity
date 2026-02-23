@@ -61,7 +61,7 @@ export function JTBDSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="grid gap-8 md:grid-cols-2 items-center"
+              className="grid gap-8 md:grid-cols-2 items-center overflow-hidden"
             >
               <div>
                 <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary-white mb-4">
@@ -95,7 +95,7 @@ export function JTBDSection() {
         </>
       ) : (
         /* Mobile: Accordion */
-        <div className="space-y-3">
+        <div className="space-y-3 overflow-hidden">
           {jtbdTabs.map((tab) => {
             const Icon = icons[tab.id];
             const isOpen = activeTab === tab.id;

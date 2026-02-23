@@ -41,7 +41,7 @@ export function TrackRecordSection() {
         subtitle="Real results from real investments. Every case backed by data."
       />
 
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={page}
@@ -51,7 +51,7 @@ export function TrackRecordSection() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-            className="grid gap-8 md:grid-cols-2 items-center"
+            className="grid gap-8 md:grid-cols-2 items-center overflow-hidden"
           >
             {/* Image */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">

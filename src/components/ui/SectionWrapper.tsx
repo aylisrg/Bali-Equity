@@ -17,7 +17,7 @@ export function SectionWrapper({
     <section
       id={id}
       className={cn(
-        "px-4 md:px-8 py-16 md:py-24",
+        "px-4 md:px-8 py-16 md:py-24 overflow-hidden",
         dark ? "bg-deep-blue" : "bg-surface",
         className
       )}
