@@ -25,7 +25,7 @@ export function LegalSecuritySection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
-        className="grid gap-6 md:grid-cols-3"
+        className="grid gap-6 md:grid-cols-3 overflow-hidden"
       >
         {legalItems.map((item, i) => {
           const Icon = iconMap[item.icon];

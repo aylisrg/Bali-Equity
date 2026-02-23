@@ -30,10 +30,10 @@ export function FooterSection() {
       {/* Footer */}
       <footer
         id={SECTION_IDS.footer}
-        className="border-t border-white/5 bg-deep-blue px-4 py-12 md:px-8"
+        className="border-t border-white/5 bg-deep-blue px-4 py-12 md:px-8 overflow-hidden"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3 overflow-hidden">
             {/* Brand */}
             <div>
               <div className="font-heading text-2xl font-bold text-primary-white mb-3">

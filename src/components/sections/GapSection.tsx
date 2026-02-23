@@ -23,7 +23,7 @@ export function GapSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
-        className="grid gap-6 md:grid-cols-2"
+        className="grid gap-6 md:grid-cols-2 overflow-hidden"
       >
         {/* Typical Broker */}
         <motion.div variants={fadeInUp}>

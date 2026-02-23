@@ -74,7 +74,7 @@ export function ExpertiseSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
-        className="grid gap-8 md:grid-cols-3"
+        className="grid gap-8 md:grid-cols-3 overflow-hidden"
       >
         {/* Founder Quote — spans 2 cols */}
         <motion.div variants={slideInFromLeft} className="md:col-span-2">
@@ -118,7 +118,7 @@ export function ExpertiseSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-8 grid gap-6 md:grid-cols-2"
+        className="mt-8 grid gap-6 md:grid-cols-2 overflow-hidden"
       >
         <motion.div variants={fadeInUp}>
           <Card variant="solid">

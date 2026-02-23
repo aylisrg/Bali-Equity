@@ -15,13 +15,13 @@ export function LeadMagnetSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
-        className="grid gap-8 md:grid-cols-2 items-center"
+        className="grid gap-8 md:grid-cols-2 items-center overflow-hidden"
       >
         {/* PDF Mockup */}
-        <motion.div variants={fadeInUp} className="flex justify-center">
-          <div className="relative">
+        <motion.div variants={fadeInUp} className="flex justify-center px-4 sm:px-0">
+          <div className="relative w-full">
             {/* Main PDF card */}
-            <div className="relative w-64 md:w-72 rounded-2xl bg-gradient-to-br from-light-blue to-deep-blue p-8 shadow-2xl shadow-deep-blue/50 border border-white/10">
+            <div className="relative w-full max-w-64 md:max-w-72 rounded-2xl bg-gradient-to-br from-light-blue to-deep-blue p-8 shadow-2xl shadow-deep-blue/50 border border-white/10">
               <FileText className="h-12 w-12 text-accent-gold mb-4" />
               <div className="text-xs text-accent-gold font-semibold uppercase tracking-wider mb-2">
                 Free Report
