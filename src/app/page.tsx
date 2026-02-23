@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/sections/HeroSection";
+import { AirbnbBadgeSection } from "@/components/sections/AirbnbBadgeSection";
 import { GapSection } from "@/components/sections/GapSection";
 import { JTBDSection } from "@/components/sections/JTBDSection";
 import { TrackRecordSection } from "@/components/sections/TrackRecordSection";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <AirbnbBadgeSection />
       <GapSection />
       <JTBDSection />
       <TrackRecordSection />
