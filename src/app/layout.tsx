@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "EQUITY BALI — Strategic Real Estate Investment in Bali",
   description:
     "Premium Bali real estate agency. Data-driven investment portfolios, in-house property management, and top-10% market performance. ROI from 12%.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "EQUITY BALI — Strategic Real Estate Investment in Bali",
     description:
