@@ -94,7 +94,8 @@ export const jtbdTabs: JTBDTab[] = [
       "3–4BR family configurations",
       "International school proximity",
       "Infrastructure & community focus",
-      "Projected appreciation 15–20% annually",
+      "Projected appreciation 7–15% annually",
+      "Large-format layout designed for privacy and tropical serenity",
     ],
     imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
   },
@@ -125,13 +126,13 @@ export const legalItems: LegalItem[] = [
     icon: "RefreshCw",
     title: "Secure Transactions",
     description:
-      "Full AML compliance. We support both crypto and fiat transactions through licensed escrow partners with transparent audit trails.",
+      "We support transactions through licensed escrow partners with transparent audit trails.",
   },
   {
     icon: "FileSearch",
     title: "4-Stage Due Diligence",
     description:
-      "Title verification, zoning audit, encumbrance check, and independent valuation. Every asset passes our 4-stage process before listing.",
+      "Title verification, zoning audit, encumbrance check, and independent valuation.",
   },
 ];
 
@@ -158,15 +159,15 @@ export const comparisonData = {
 
 export const founderQuote = {
   text: "We don't believe in 'intuition.' Our algorithms process 37,000 listings weekly to find the assets that actually perform.",
-  name: "Alex Petrov",
+  name: "Alex Kasatskiy",
   role: "Founder & CEO, EQUITY BALI",
 };
 
 export const expertiseStats = [
   { label: "Listings Analyzed Weekly", value: "37,000+" },
-  { label: "Average Client ROI", value: "32%" },
+  { label: "Average Client ROI", value: "14%" },
   { label: "Avg Occupancy (Managed)", value: "87%" },
-  { label: "Due Diligence Pass Rate", value: "12%" },
+  { label: "Legal properties with SLF/PBG", value: "100%" },
 ];
 
 export const managementFeatures = [

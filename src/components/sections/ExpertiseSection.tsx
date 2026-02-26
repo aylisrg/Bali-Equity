@@ -83,9 +83,11 @@ export function ExpertiseSection() {
               &ldquo;{founderQuote.text}&rdquo;
             </blockquote>
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-full bg-gradient-to-br from-accent-gold to-accent-gold/60 flex items-center justify-center text-deep-blue font-bold text-lg">
-                {founderQuote.name.charAt(0)}
-              </div>
+              <img
+                src="/ceo-photo.jpg"
+                alt={founderQuote.name}
+                className="h-12 w-12 rounded-full object-cover"
+              />
               <div>
                 <div className="font-semibold text-primary-white">
                   {founderQuote.name}

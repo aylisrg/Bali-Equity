@@ -8,82 +8,24 @@ import { managementFeatures } from "@/data/mockData";
 import { SECTION_IDS } from "@/lib/constants";
 import { slideInFromLeft, slideInFromRight } from "@/lib/animations";
 
-function PhoneDashboard() {
+function AirbnbDashboard() {
   return (
-    <div className="relative mx-auto w-full max-w-[260px] md:max-w-[280px] px-4 sm:px-0">
-      {/* Phone Frame */}
-      <div className="rounded-[2.5rem] border-4 border-white/20 bg-deep-blue p-2 shadow-2xl shadow-deep-blue/80">
-        {/* Notch */}
-        <div className="mx-auto mb-2 h-5 w-24 rounded-full bg-white/10" />
-
-        {/* Screen */}
-        <div className="rounded-[2rem] bg-surface overflow-hidden">
-          {/* Header */}
-          <div className="bg-gradient-to-r from-light-blue to-deep-blue px-4 py-3">
-            <div className="text-xs text-muted">Portfolio Dashboard</div>
-            <div className="text-sm font-bold text-primary-white">
-              EQUITY BALI
-            </div>
+    <div className="relative mx-auto w-full max-w-[320px] md:max-w-[360px] px-4 sm:px-0">
+      <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-deep-blue/80 border border-white/10">
+        {/* Equity Bali brand overlay — replaces Airbnb logo */}
+        <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-r from-light-blue to-deep-blue px-4 py-2 flex items-center gap-2">
+          <div className="text-xs text-accent-gold font-semibold uppercase tracking-wider">
+            Portfolio Dashboard
           </div>
-
-          {/* Occupancy */}
-          <div className="px-4 py-3 border-b border-white/5">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-muted">Occupancy Rate</span>
-              <span className="text-sm font-bold text-accent-gold">87%</span>
-            </div>
-            <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-accent-gold/60 to-accent-gold"
-                style={{ width: "87%" }}
-              />
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-2 p-3">
-            <div className="rounded-lg bg-white/5 p-2">
-              <DollarSign className="h-3.5 w-3.5 text-accent-gold mb-1" />
-              <div className="text-[10px] text-muted">Monthly Rev</div>
-              <div className="text-xs font-bold text-primary-white">
-                $4,280
-              </div>
-            </div>
-            <div className="rounded-lg bg-white/5 p-2">
-              <Star className="h-3.5 w-3.5 text-accent-gold mb-1" />
-              <div className="text-[10px] text-muted">Guest Rating</div>
-              <div className="text-xs font-bold text-primary-white">4.92</div>
-            </div>
-          </div>
-
-          {/* Bookings */}
-          <div className="px-4 pb-3">
-            <div className="text-xs text-muted mb-2">Recent Bookings</div>
-            {[
-              { guest: "J. Smith", dates: "Dec 14–20", amount: "$890" },
-              { guest: "M. Chen", dates: "Dec 22–28", amount: "$1,120" },
-              { guest: "L. Weber", dates: "Jan 2–8", amount: "$980" },
-            ].map((booking, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between py-1.5 border-b border-white/5 last:border-0"
-              >
-                <div>
-                  <div className="text-[11px] font-semibold text-primary-white">
-                    {booking.guest}
-                  </div>
-                  <div className="text-[9px] text-muted">{booking.dates}</div>
-                </div>
-                <span className="text-[11px] font-bold text-accent-gold">
-                  {booking.amount}
-                </span>
-              </div>
-            ))}
-          </div>
+          <span className="ml-auto text-xs font-bold text-primary-white">
+            EQUITY BALI
+          </span>
         </div>
-
-        {/* Home indicator */}
-        <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-white/20" />
+        <img
+          src="/airbnb-dashboard.jpg"
+          alt="Portfolio management dashboard"
+          className="w-full h-auto object-cover"
+        />
       </div>
     </div>
   );
@@ -134,7 +76,7 @@ export function ManagementSection() {
           viewport={{ once: true, margin: "-80px" }}
           className="flex justify-center"
         >
-          <PhoneDashboard />
+          <AirbnbDashboard />
         </motion.div>
       </div>
     </SectionWrapper>
