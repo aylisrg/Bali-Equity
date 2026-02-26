@@ -21,11 +21,17 @@ function AirbnbDashboard() {
             EQUITY BALI
           </span>
         </div>
-        <img
-          src="/airbnb-dashboard.jpg"
-          alt="Portfolio management dashboard"
-          className="w-full h-auto object-cover"
-        />
+        <a
+          href="https://www.airbnb.ae/users/profile/1463776046956512996?previous_page_name=PdpHomeMarketplace"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/airbnb-dashboard.jpg"
+            alt="Portfolio management dashboard"
+            className="w-full h-auto object-cover"
+          />
+        </a>
       </div>
     </div>
   );
