@@ -51,7 +51,7 @@ export function LeadMagnetSection() {
         {/* Text + CTA */}
         <motion.div variants={fadeInUp}>
           <span className="text-accent-gold text-sm font-semibold uppercase tracking-wider">
-            Free Download
+            Free Report
           </span>
           <h3 className="mt-3 font-heading text-3xl md:text-4xl font-bold text-primary-white leading-tight">
             Bali Real Estate
@@ -86,7 +86,7 @@ export function LeadMagnetSection() {
               )}
               icon={<MessageCircle className="h-5 w-5" />}
             >
-              Download PDF Report
+              Free PDF Report
             </Button>
           </div>
         </motion.div>

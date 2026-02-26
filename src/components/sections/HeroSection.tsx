@@ -68,9 +68,9 @@ export function HeroSection() {
           variants={fadeInUp}
           className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] text-primary-white"
         >
-          Bali — as a Strategic Asset
+          Bali as a Strategic Asset
           <span className="block text-accent-gold">
-            in Your Capital Geography
+            in Your Global Portfolio
           </span>
         </motion.h1>
 
