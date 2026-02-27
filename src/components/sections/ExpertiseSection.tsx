@@ -114,42 +114,90 @@ function AlphaGapChart() {
 }
 
 function PriceGrowthChart() {
+  // Chart dimensions
+  const W = 280, H = 140;
+  const padL = 54, padR = 18, padT = 14, padB = 24;
+  const cW = W - padL - padR; // 208
+  const cH = H - padT - padB; // 102
+
+  // Y-axis scale: $1,600 – $2,400
+  const yMin = 1600, yMax = 2400;
+  const toY = (val: number) => padT + cH - ((val - yMin) / (yMax - yMin)) * cH;
+
+  // Data points
+  const x0 = padL, x1 = padL + cW;
+  const y0 = toY(2000); // ~56
+  const y1 = toY(2200); // ~31
+
+  const gridValues = [1600, 1800, 2000, 2200, 2400];
+
   return (
     <div className="space-y-3">
-      <div className="relative h-32">
-        <svg
-          viewBox="0 0 200 100"
-          className="w-full h-full"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <linearGradient id="priceGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#C4B193" stopOpacity="0.25" />
-              <stop offset="100%" stopColor="#C4B193" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          {/* Area fill */}
-          <path
-            d="M20,65 L180,35 V100 H20 Z"
-            fill="url(#priceGradient)"
-          />
-          {/* Line */}
-          <line
-            x1="20" y1="65" x2="180" y2="35"
-            stroke="#C4B193"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-          />
-          {/* 2024 dot */}
-          <circle cx="20" cy="65" r="5" fill="#0A1628" stroke="#C4B193" strokeWidth="2" />
-          {/* 2025 dot */}
-          <circle cx="180" cy="35" r="5" fill="#0A1628" stroke="#C4B193" strokeWidth="2" />
-          {/* 2024 label */}
-          <text x="20" y="80" textAnchor="middle" fill="#8A96A8" fontSize="10">$2,000</text>
-          {/* 2025 label */}
-          <text x="180" y="28" textAnchor="middle" fill="#C4B193" fontSize="10" fontWeight="bold">$2,200</text>
-        </svg>
-      </div>
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        className="w-full"
+        preserveAspectRatio="xMidYMid meet"
+      >
+        <defs>
+          <linearGradient id="priceGradient2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#C4B193" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="#C4B193" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+
+        {/* Y-axis grid lines + labels */}
+        {gridValues.map((val) => {
+          const gy = toY(val);
+          return (
+            <g key={val}>
+              <line
+                x1={padL} y1={gy} x2={padL + cW} y2={gy}
+                stroke="#FFFFFF" strokeOpacity="0.05" strokeWidth="1"
+              />
+              <text
+                x={padL - 6} y={gy + 4}
+                textAnchor="end"
+                fill="#8A96A8"
+                fontSize="9"
+              >
+                ${(val / 1000).toFixed(1)}k
+              </text>
+            </g>
+          );
+        })}
+
+        {/* Area fill */}
+        <path
+          d={`M${x0},${y0} L${x1},${y1} V${padT + cH} H${x0} Z`}
+          fill="url(#priceGradient2)"
+        />
+
+        {/* Line */}
+        <line
+          x1={x0} y1={y0} x2={x1} y2={y1}
+          stroke="#C4B193" strokeWidth="2.5" strokeLinecap="round"
+        />
+
+        {/* 2024 dot */}
+        <circle cx={x0} cy={y0} r="5" fill="#0D1E35" stroke="#C4B193" strokeWidth="2" />
+        {/* 2024 value label */}
+        <text x={x0} y={y0 + 16} textAnchor="middle" fill="#8A96A8" fontSize="10">
+          $2,000
+        </text>
+
+        {/* 2025 dot */}
+        <circle cx={x1} cy={y1} r="5" fill="#0D1E35" stroke="#C4B193" strokeWidth="2" />
+        {/* 2025 value label */}
+        <text x={x1} y={y1 - 10} textAnchor="middle" fill="#C4B193" fontSize="10" fontWeight="bold">
+          $2,200
+        </text>
+
+        {/* X-axis baseline */}
+        <line
+          x1={padL} y1={padT + cH} x2={padL + cW} y2={padT + cH}
+          stroke="#FFFFFF" strokeOpacity="0.08" strokeWidth="1"
+        />
+      </svg>
 
       {/* +10% badge */}
       <div className="flex items-center justify-between">
