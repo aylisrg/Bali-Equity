@@ -45,7 +45,7 @@ function AlphaGapChart() {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-end justify-center gap-6 sm:gap-10 h-44 relative">
+      <div className="flex items-end justify-center gap-6 sm:gap-10 h-[200px] relative">
         {alphaBarData.map((bar, i) => (
           <div
             key={bar.label}
@@ -180,15 +180,15 @@ function PriceGrowthChart() {
 
         {/* 2024 dot */}
         <circle cx={x0} cy={y0} r="5" fill="#0D1E35" stroke="#C4B193" strokeWidth="2" />
-        {/* 2024 value label */}
-        <text x={x0} y={y0 + 16} textAnchor="middle" fill="#8A96A8" fontSize="10">
+        {/* 2024 value label — right of dot, above the $2.0k grid label */}
+        <text x={x0 + 8} y={y0 - 7} textAnchor="start" fill="#8A96A8" fontSize="10">
           $2,000
         </text>
 
         {/* 2025 dot */}
         <circle cx={x1} cy={y1} r="5" fill="#0D1E35" stroke="#C4B193" strokeWidth="2" />
-        {/* 2025 value label */}
-        <text x={x1} y={y1 - 10} textAnchor="middle" fill="#C4B193" fontSize="10" fontWeight="bold">
+        {/* 2025 value label — left-aligned from dot so it doesn't clip right edge */}
+        <text x={x1} y={y1 - 10} textAnchor="end" fill="#C4B193" fontSize="10" fontWeight="bold">
           $2,200
         </text>
 
