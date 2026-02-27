@@ -43,7 +43,7 @@ export const strategicPicks: StrategicPick[] = [
     insightBadge: "Supply Deficit — 15% Fewer Permits",
     insightReason: "Building permits in this zone dropped 15% YoY, driving scarcity value for existing assets.",
     features: ["2 Bed", "10m to Beach"],
-    imageUrl: "https://drive.google.com/uc?export=view&id=1hy7MniZCksWqJnIvd0LfSF63M-mM-TV4",
+    imageUrl: "https://lh3.googleusercontent.com/d/1hy7MniZCksWqJnIvd0LfSF63M-mM-TV4",
   },
   {
     id: "pick-2",
@@ -54,7 +54,7 @@ export const strategicPicks: StrategicPick[] = [
     insightBadge: "Emerging Zone — Infrastructure Boost",
     insightReason: "New residential community with its own infrastructure: parking, landscaped park area, walking paths and a waterfall.",
     features: ["3 Bed", "Jungle View"],
-    imageUrl: "https://drive.google.com/uc?export=view&id=1AJeTKGWsVHTtoGyLNHDvRMaAM-2Woi4s",
+    imageUrl: "https://lh3.googleusercontent.com/d/1AJeTKGWsVHTtoGyLNHDvRMaAM-2Woi4s",
   },
   {
     id: "pick-3",
@@ -65,7 +65,7 @@ export const strategicPicks: StrategicPick[] = [
     insightBadge: "High Yield — Tourist Demand",
     insightReason: "Rising tourist inflows are supporting rental returns of up to 10% for villas in Canggu.",
     features: ["2 Bed", "Rice View"],
-    imageUrl: "https://drive.google.com/uc?export=view&id=12DHf17yI8SSA-xATzgmhVxI6UTtDn-4a",
+    imageUrl: "https://lh3.googleusercontent.com/d/12DHf17yI8SSA-xATzgmhVxI6UTtDn-4a",
   },
 ];
 
