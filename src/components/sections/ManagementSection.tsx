@@ -44,7 +44,7 @@ export function ManagementSection() {
     <SectionWrapper id={SECTION_IDS.management}>
       <SectionHeading
         title="Your Property, Our Management"
-        subtitle="Transparent reporting 24/7. Receipts, occupancy, expenses — all in one dashboard."
+        subtitle="Transparent reporting 24/7. Receipts, occupancy, expenses — all in one dashboard"
       />
 
       <div className="grid gap-12 md:grid-cols-2 items-center overflow-hidden">
