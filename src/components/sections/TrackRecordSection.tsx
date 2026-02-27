@@ -38,7 +38,7 @@ export function TrackRecordSection() {
     <SectionWrapper id={SECTION_IDS.trackRecord} dark={false}>
       <SectionHeading
         title="Numbers, Not Promises"
-        subtitle="Real results from real investments. Every case backed by data."
+        subtitle="Real results from real investments. Every case backed by data"
       />
 
       <div className="relative overflow-hidden">

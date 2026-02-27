@@ -66,7 +66,7 @@ export function ExpertiseSection() {
     <SectionWrapper id={SECTION_IDS.expertise}>
       <SectionHeading
         title="Expertise & Data"
-        subtitle="Decisions backed by algorithms, not intuition."
+        subtitle="Decisions backed by algorithms, not intuition"
       />
 
       <motion.div

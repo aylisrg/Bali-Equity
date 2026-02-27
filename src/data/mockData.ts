@@ -41,7 +41,7 @@ export const strategicPicks: StrategicPick[] = [
     price: 220000,
     expectedROI: 11.5,
     insightBadge: "Supply Deficit — 15% Fewer Permits",
-    insightReason: "Building permits in this zone dropped 15% YoY, driving scarcity value for existing assets.",
+    insightReason: "Building permits in this zone dropped 15% YoY, driving scarcity value for existing assets",
     features: ["2 Bed", "10m to Beach"],
     imageUrl: "https://lh3.googleusercontent.com/d/1hy7MniZCksWqJnIvd0LfSF63M-mM-TV4",
   },
@@ -52,7 +52,7 @@ export const strategicPicks: StrategicPick[] = [
     price: 380000,
     expectedROI: 12.0,
     insightBadge: "Emerging Zone — Infrastructure Boost",
-    insightReason: "New residential community with its own infrastructure: parking, landscaped park area, walking paths and a waterfall.",
+    insightReason: "New residential community with its own infrastructure: parking, landscaped park area, walking paths and a waterfall",
     features: ["3 Bed", "Jungle View"],
     imageUrl: "https://lh3.googleusercontent.com/d/1AJeTKGWsVHTtoGyLNHDvRMaAM-2Woi4s",
   },
@@ -63,7 +63,7 @@ export const strategicPicks: StrategicPick[] = [
     price: 200000,
     expectedROI: 12.5,
     insightBadge: "High Yield — Tourist Demand",
-    insightReason: "Rising tourist inflows are supporting rental returns of up to 10% for villas in Canggu.",
+    insightReason: "Rising tourist inflows are supporting rental returns of up to 10% for villas in Canggu",
     features: ["2 Bed", "Rice View"],
     imageUrl: "https://lh3.googleusercontent.com/d/12DHf17yI8SSA-xATzgmhVxI6UTtDn-4a",
   },
@@ -75,7 +75,7 @@ export const jtbdTabs: JTBDTab[] = [
     label: "I Want Income",
     headline: "Maximize Yield with Data-Driven Short-Term Rental",
     description:
-      "Properties positioned in the epicenter of tourism flow. Algorithmically priced, professionally managed, and designed for maximum occupancy.",
+      "Properties positioned in the epicenter of tourism flow. Algorithmically priced, professionally managed, and designed for maximum occupancy",
     metrics: [
       "85%+ average occupancy rate",
       "6–7 year payback period",
@@ -89,7 +89,7 @@ export const jtbdTabs: JTBDTab[] = [
     label: "I Want a Home Base",
     headline: "A Home That Grows in Value While You Live It",
     description:
-      "3–4 bedroom villas in family-friendly zones with international schools, hospitals, and co-working spaces. Your lifestyle upgrade that doubles as an investment.",
+      "3–4 bedroom villas in family-friendly zones with international schools, hospitals, and co-working spaces. Your lifestyle upgrade that doubles as an investment",
     metrics: [
       "3–4BR family configurations",
       "International school proximity",
@@ -104,7 +104,7 @@ export const jtbdTabs: JTBDTab[] = [
     label: "I Want to Preserve Capital",
     headline: "Beachfront & Clifftop — Where Land Only Appreciates",
     description:
-      "Premium beachfront and cliff-edge properties where supply is physically limited. Ironclad legal structuring protects your capital while land values climb 20–30% annually.",
+      "Premium beachfront and cliff-edge properties where supply is physically limited. Ironclad legal structuring protects your capital while land values climb 20–30% annually",
     metrics: [
       "Beachfront & cliff locations",
       "Land appreciation +20–30% per year",
@@ -120,19 +120,19 @@ export const legalItems: LegalItem[] = [
     icon: "Shield",
     title: "Ownership Structure",
     description:
-      "Leasehold and Freehold options via PT PMA. We structure each deal for maximum legal protection and tax efficiency for foreign investors.",
+      "Leasehold and Freehold options via PT PMA. We structure each deal for maximum legal protection and tax efficiency for foreign investors",
   },
   {
     icon: "RefreshCw",
     title: "Secure Transactions",
     description:
-      "We support transactions through licensed escrow partners with transparent audit trails.",
+      "We support transactions through licensed escrow partners with transparent audit trails",
   },
   {
     icon: "FileSearch",
     title: "4-Stage Due Diligence",
     description:
-      "Title verification, zoning audit, encumbrance check, and independent valuation.",
+      "Title verification, zoning audit, encumbrance check, and independent valuation",
   },
 ];
 
@@ -158,7 +158,7 @@ export const comparisonData = {
 };
 
 export const founderQuote = {
-  text: "We don't believe in 'intuition.' Our algorithms process 37,000 listings weekly to find the assets that actually perform.",
+  text: "We don't believe in 'intuition.' Our algorithms process 37,000 listings weekly to find the assets that actually perform",
   name: "Alex Kasatskiy",
   role: "Founder & CEO, EQUITY BALI",
 };

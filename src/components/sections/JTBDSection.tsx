@@ -27,7 +27,7 @@ export function JTBDSection() {
     <SectionWrapper id={SECTION_IDS.jtbd}>
       <SectionHeading
         title="What's Your Investment Goal?"
-        subtitle="Different objectives demand different strategies. We tailor each portfolio to your specific need."
+        subtitle="Different objectives demand different strategies. We tailor each portfolio to your specific need"
       />
 
       {isDesktop ? (

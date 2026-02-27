@@ -14,7 +14,7 @@ export function StrategicPicksSection() {
     <SectionWrapper id={SECTION_IDS.strategicPicks}>
       <SectionHeading
         title="Strategic Picks"
-        subtitle="Hand-selected assets that passed our 4-stage due diligence. Each one backed by a clear investment thesis."
+        subtitle="Hand-selected assets that passed our 4-stage due diligence. Each one backed by a clear investment thesis"
       />
 
       <motion.div

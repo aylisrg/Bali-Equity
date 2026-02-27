@@ -15,7 +15,7 @@ export function FooterSection() {
       <SectionWrapper id={SECTION_IDS.quiz} dark={false}>
         <SectionHeading
           title="Calculate Your ROI"
-          subtitle="Answer 3 quick questions and get a personalized property selection."
+          subtitle="Answer 3 quick questions and get a personalized property selection"
         />
         <motion.div
           variants={fadeInUp}
@@ -104,7 +104,7 @@ export function FooterSection() {
               &copy; {new Date().getFullYear()} EQUITY BALI. All rights reserved.
             </p>
             <p className="text-xs text-muted/40">
-              Investment involves risk. Past performance does not guarantee future results.
+              Investment involves risk. Past performance does not guarantee future results
             </p>
           </div>
         </div>

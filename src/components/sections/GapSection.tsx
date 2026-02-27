@@ -15,7 +15,7 @@ export function GapSection() {
     <SectionWrapper id={SECTION_IDS.gap} dark={false}>
       <SectionHeading
         title="Not All Brokers Are Created Equal"
-        subtitle="Most promise returns. We engineer them."
+        subtitle="Most promise returns. We engineer them"
       />
 
       <motion.div
