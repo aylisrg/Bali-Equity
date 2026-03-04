@@ -111,7 +111,7 @@ export const jtbdTabs: JTBDTab[] = [
       "Full legal due diligence",
       "Capital protection first",
     ],
-    imageUrl: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+    imageUrl: "/images/preserve-capital.jpg",
   },
 ];
 
