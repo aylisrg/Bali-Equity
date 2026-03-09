@@ -113,11 +113,18 @@ function AlphaGapChart() {
   );
 }
 
+// Chart dimension constants — shared between PriceGrowthChart and the x-axis labels div
+const PRICE_CHART_W = 280;
+const PRICE_CHART_PAD_L = 54;
+const PRICE_CHART_PAD_R = 36;
+const PRICE_CHART_LABEL_PAD_LEFT = `${((PRICE_CHART_PAD_L / PRICE_CHART_W) * 100).toFixed(1)}%`;
+const PRICE_CHART_LABEL_PAD_RIGHT = `${((PRICE_CHART_PAD_R / PRICE_CHART_W) * 100).toFixed(1)}%`;
+
 function PriceGrowthChart() {
   // Chart dimensions
-  const W = 280, H = 140;
-  const padL = 54, padR = 18, padT = 14, padB = 24;
-  const cW = W - padL - padR; // 208
+  const W = PRICE_CHART_W, H = 140;
+  const padL = PRICE_CHART_PAD_L, padR = PRICE_CHART_PAD_R, padT = 14, padB = 24;
+  const cW = W - padL - padR; // 190
   const cH = H - padT - padB; // 102
 
   // Y-axis scale: $1,600 – $2,400
@@ -296,7 +303,7 @@ export function ExpertiseSection() {
               </span>
             </div>
             <PriceGrowthChart />
-            <div className="mt-3 flex justify-between text-xs text-muted">
+            <div className="mt-3 flex justify-between text-xs text-muted" style={{ paddingLeft: PRICE_CHART_LABEL_PAD_LEFT, paddingRight: PRICE_CHART_LABEL_PAD_RIGHT }}>
               <span>2024</span>
               <span>2025</span>
             </div>
