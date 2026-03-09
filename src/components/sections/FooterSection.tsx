@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FooterSection = () => {
+export const FooterSection = () => {
   return (
     <footer>
       {/* Other footer elements */}
