@@ -85,7 +85,7 @@ export function TrackRecordSection() {
                 <div className="rounded-xl bg-white/5 p-4">
                   <div className="text-sm text-muted mb-1">Annual ROI</div>
                   <div className="text-xl font-bold text-accent-gold">
-                    {currentCase.annualROI}%
+                    {currentCase.annualROI !== null ? `${currentCase.annualROI}%` : "TBD"}
                   </div>
                 </div>
               </div>

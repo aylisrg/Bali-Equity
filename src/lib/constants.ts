@@ -13,4 +13,5 @@ export const SECTION_IDS = {
   strategicPicks: "strategic-picks",
   legal: "legal",
   management: "management",
+  footer: "footer",
 };

@@ -6,7 +6,7 @@ export interface TrackRecordCase {
   location: string;
   entryPrice: number;
   capitalization: number;
-  annualROI: number;
+  annualROI: number | null;
   status: string;
   imageUrl: string;
 }
