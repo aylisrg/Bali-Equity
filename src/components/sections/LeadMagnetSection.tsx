@@ -6,6 +6,7 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Button } from "@/components/ui/Button";
 import { whatsappUrl, SECTION_IDS } from "@/lib/constants";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { track } from "@/lib/analytics";
 
 export function LeadMagnetSection() {
   return (
@@ -84,6 +85,12 @@ export function LeadMagnetSection() {
               href={whatsappUrl(
                 "Hello, I'd like to receive the analytics report"
               )}
+              onClick={() =>
+                track({
+                  name: "lead_magnet_requested",
+                  props: { report: "bali_analytics_2025_2026" },
+                })
+              }
               icon={<MessageCircle className="h-5 w-5" />}
             >
               Free PDF Report

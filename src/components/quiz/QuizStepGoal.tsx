@@ -3,6 +3,7 @@
 import { TrendingUp, Home, Shield } from "lucide-react";
 import type { InvestmentGoal, QuizAction } from "@/types";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/analytics";
 
 const goals: {
   id: InvestmentGoal;
@@ -53,6 +54,17 @@ export function QuizStepGoal({ selected, dispatch }: QuizStepGoalProps) {
             <button
               key={goal.id}
               onClick={() => {
+                if (selected === null) {
+                  track({ name: "quiz_started" });
+                }
+                track({
+                  name: "quiz_step_answered",
+                  props: {
+                    step: "goal",
+                    step_index: 1,
+                    answer: goal.id,
+                  },
+                });
                 dispatch({ type: "SET_GOAL", payload: goal.id });
                 dispatch({ type: "NEXT_STEP" });
               }}
