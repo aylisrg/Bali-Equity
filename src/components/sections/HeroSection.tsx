@@ -5,9 +5,14 @@ import { MessageCircle, ChevronDown, ExternalLink, Star, Instagram } from "lucid
 import { Button } from "@/components/ui/Button";
 import { whatsappUrl, SECTION_IDS, INSTAGRAM_URL } from "@/lib/constants";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { track } from "@/lib/analytics";
 
 export function HeroSection() {
   const scrollToQuiz = () => {
+    track({
+      name: "cta_clicked",
+      props: { section: "hero", label: "Calculate My ROI" },
+    });
     document
       .getElementById(SECTION_IDS.quiz)
       ?.scrollIntoView({ behavior: "smooth" });
@@ -130,6 +135,15 @@ export function HeroSection() {
             href={whatsappUrl(
               "Hello, I'd like to view properties with ROI from 12%"
             )}
+            onClick={() =>
+              track({
+                name: "lead_submitted",
+                props: {
+                  source: "hero",
+                  channel: "whatsapp",
+                },
+              })
+            }
             icon={<MessageCircle className="h-5 w-5" />}
             className="w-full sm:w-auto"
           >

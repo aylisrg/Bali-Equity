@@ -2,6 +2,7 @@
 
 import type { BudgetRange, QuizAction } from "@/types";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/analytics";
 
 const budgets: {
   id: BudgetRange;
@@ -47,6 +48,14 @@ export function QuizStepBudget({ selected, dispatch }: QuizStepBudgetProps) {
             <button
               key={budget.id}
               onClick={() => {
+                track({
+                  name: "quiz_step_answered",
+                  props: {
+                    step: "budget",
+                    step_index: 3,
+                    answer: budget.id,
+                  },
+                });
                 dispatch({ type: "SET_BUDGET", payload: budget.id });
                 dispatch({ type: "NEXT_STEP" });
               }}

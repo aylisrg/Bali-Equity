@@ -56,6 +56,7 @@ export function Button({
         target="_blank"
         rel="noopener noreferrer"
         className={classes}
+        onClick={onClick}
       >
         {icon}
         {children}

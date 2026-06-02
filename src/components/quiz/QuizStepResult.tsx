@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
 import { MessageCircle, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { whatsappUrl } from "@/lib/constants";
+import { track } from "@/lib/analytics";
 import type { QuizAnswers, QuizAction } from "@/types";
 
 const goalLabels = {
@@ -28,6 +30,17 @@ interface QuizStepResultProps {
 }
 
 export function QuizStepResult({ answers, dispatch }: QuizStepResultProps) {
+  useEffect(() => {
+    track({
+      name: "quiz_completed",
+      props: {
+        goal: answers.goal,
+        horizon: answers.horizon,
+        budget: answers.budget,
+      },
+    });
+  }, [answers.goal, answers.horizon, answers.budget]);
+
   const message = [
     `Hello! I completed the investment quiz on your website.`,
     ``,
@@ -85,13 +98,28 @@ export function QuizStepResult({ answers, dispatch }: QuizStepResultProps) {
           variant="whatsapp"
           size="lg"
           href={whatsappUrl(message)}
+          onClick={() =>
+            track({
+              name: "lead_submitted",
+              props: {
+                source: "quiz_result",
+                channel: "whatsapp",
+                goal: answers.goal,
+                horizon: answers.horizon,
+                budget: answers.budget,
+              },
+            })
+          }
           icon={<MessageCircle className="h-5 w-5" />}
           className="w-full sm:w-auto"
         >
           Send to WhatsApp
         </Button>
         <button
-          onClick={() => dispatch({ type: "RESET" })}
+          onClick={() => {
+            track({ name: "quiz_reset" });
+            dispatch({ type: "RESET" });
+          }}
           className="flex items-center gap-2 text-sm text-muted hover:text-primary-white transition-colors cursor-pointer"
         >
           <RotateCcw className="h-4 w-4" />

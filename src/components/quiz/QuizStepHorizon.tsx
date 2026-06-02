@@ -3,6 +3,7 @@
 import { Zap, Search } from "lucide-react";
 import type { InvestmentHorizon, QuizAction } from "@/types";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/analytics";
 
 const horizons: {
   id: InvestmentHorizon;
@@ -49,6 +50,14 @@ export function QuizStepHorizon({ selected, dispatch }: QuizStepHorizonProps) {
             <button
               key={horizon.id}
               onClick={() => {
+                track({
+                  name: "quiz_step_answered",
+                  props: {
+                    step: "horizon",
+                    step_index: 2,
+                    answer: horizon.id,
+                  },
+                });
                 dispatch({ type: "SET_HORIZON", payload: horizon.id });
                 dispatch({ type: "NEXT_STEP" });
               }}
