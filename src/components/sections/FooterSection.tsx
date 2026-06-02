@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, MapPin, Mail } from "lucide-react";
+import { MessageCircle, MapPin, Mail, Instagram } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { QuizContainer } from "@/components/quiz/QuizContainer";
-import { SECTION_IDS, WHATSAPP_NUMBER } from "@/lib/constants";
+import { SECTION_IDS, WHATSAPP_NUMBER, INSTAGRAM_URL } from "@/lib/constants";
 import { fadeInUp } from "@/lib/animations";
 
 export function FooterSection() {
@@ -69,6 +69,17 @@ export function FooterSection() {
                 <li className="flex items-center gap-3 text-sm text-muted">
                   <MapPin className="h-4 w-4 text-accent-gold shrink-0" />
                   <span>Bali, Indonesia</span>
+                </li>
+                <li className="flex items-center gap-3 text-sm text-muted">
+                  <Instagram className="h-4 w-4 text-accent-gold shrink-0" />
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary-white transition-colors"
+                  >
+                    Instagram
+                  </a>
                 </li>
               </ul>
             </div>

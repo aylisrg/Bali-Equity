@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, ChevronDown, ExternalLink, Star } from "lucide-react";
+import { MessageCircle, ChevronDown, ExternalLink, Star, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { whatsappUrl, SECTION_IDS } from "@/lib/constants";
+import { whatsappUrl, SECTION_IDS, INSTAGRAM_URL } from "@/lib/constants";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export function HeroSection() {
@@ -48,19 +48,55 @@ export function HeroSection() {
             Equity Bali
           </span>
           {/* Airbnb Badge */}
-          <a
-            href="https://www.airbnb.ae/users/profile/1463776046956512996?previous_page_name=PdpHomeMarketplace"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-gold/15 border border-accent-gold/40 hover:border-accent-gold/80 transition-all duration-300 group"
-          >
-            <div className="flex items-center gap-1">
-              <Star className="h-4 w-4 text-accent-gold fill-accent-gold" />
-              <span className="text-accent-gold font-bold text-sm">4.9</span>
-            </div>
-            <span className="text-accent-gold text-sm font-semibold">Superhost</span>
-            <ExternalLink className="h-3.5 w-3.5 text-accent-gold/60 group-hover:text-accent-gold transition-colors" />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <motion.a
+              href="https://www.airbnb.ae/users/profile/1463776046956512996?previous_page_name=PdpHomeMarketplace"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-accent-gold/20 via-accent-gold/10 to-accent-gold/20 border border-accent-gold/60 hover:border-accent-gold transition-colors duration-300 group overflow-hidden"
+              animate={{
+                boxShadow: [
+                  "0 0 0 0 rgba(212,175,55,0)",
+                  "0 0 22px 2px rgba(212,175,55,0.35)",
+                  "0 0 0 0 rgba(212,175,55,0)",
+                ],
+              }}
+              transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {/* Shimmer sweep — rare, subtle */}
+              <motion.span
+                aria-hidden
+                className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-accent-gold/40 to-transparent skew-x-[-20deg]"
+                animate={{ x: ["0%", "450%"] }}
+                transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 5.5, ease: "easeInOut" }}
+              />
+              <div className="relative flex items-center gap-1">
+                <motion.span
+                  animate={{ scale: [1, 1.18, 1], rotate: [0, 10, -10, 0] }}
+                  transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 4, ease: "easeInOut" }}
+                  className="inline-flex"
+                >
+                  <Star className="h-4 w-4 text-accent-gold fill-accent-gold drop-shadow-[0_0_4px_rgba(212,175,55,0.6)]" />
+                </motion.span>
+                <span className="text-accent-gold font-bold text-sm">4.9</span>
+              </div>
+              <span className="relative text-accent-gold text-xs font-bold uppercase tracking-[0.18em]">
+                Superhost
+              </span>
+              <ExternalLink className="relative h-3.5 w-3.5 text-accent-gold/60 group-hover:text-accent-gold transition-colors" />
+            </motion.a>
+            {/* Instagram Badge */}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-gold/15 border border-accent-gold/40 hover:border-accent-gold/80 transition-all duration-300 group"
+            >
+              <Instagram className="h-4 w-4 text-accent-gold" />
+              <span className="text-accent-gold text-sm font-semibold">@equitybali</span>
+              <ExternalLink className="h-3.5 w-3.5 text-accent-gold/60 group-hover:text-accent-gold transition-colors" />
+            </a>
+          </div>
         </motion.div>
 
         {/* H1 */}

@@ -1,5 +1,8 @@
 export const WHATSAPP_NUMBER = "6281325815600";
 
+export const INSTAGRAM_URL =
+  "https://www.instagram.com/equitybali?igsh=MTBra2h4bGIwZW1tbQ%3D%3D&utm_source=baliequitylanding";
+
 export const whatsappUrl = (message: string) => `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
 
 export const SECTION_IDS = {

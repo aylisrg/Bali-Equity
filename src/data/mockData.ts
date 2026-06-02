@@ -9,7 +9,7 @@ export const trackRecordCases: TrackRecordCase[] = [
     capitalization: 27,
     annualROI: 15.4,
     status: "Completed — Generating Yield",
-    imageUrl: "https://lh3.googleusercontent.com/d/1tVU0kCqA6iALJ9340cBHMOlu7MJX_tKB",
+    imageUrl: "/images/canggu-beach-residence.webp",
   },
   {
     id: "case-2",
@@ -19,7 +19,7 @@ export const trackRecordCases: TrackRecordCase[] = [
     capitalization: 45,
     annualROI: null,
     status: "Offplan",
-    imageUrl: "https://lh3.googleusercontent.com/d/1roAM1L2e0aeNgiwZYSzUb_O-xtZ2pd34",
+    imageUrl: "/images/cube-ubud.webp",
   },
   {
     id: "case-3",
@@ -29,7 +29,7 @@ export const trackRecordCases: TrackRecordCase[] = [
     capitalization: 22,
     annualROI: 12,
     status: "Under Management — Top-10% Occupancy",
-    imageUrl: "https://lh3.googleusercontent.com/d/1WGoWF-ZWKQDZLJzj_jmLje-b5JJ9Rp6j",
+    imageUrl: "/images/kito-uluwatu.webp",
   },
 ];
 
@@ -43,7 +43,7 @@ export const strategicPicks: StrategicPick[] = [
     insightBadge: "Supply Deficit — 15% Fewer Permits",
     insightReason: "Building permits in this zone dropped 15% YoY, driving scarcity value for existing assets",
     features: ["2 Bed", "10m to Beach"],
-    imageUrl: "https://lh3.googleusercontent.com/d/1hy7MniZCksWqJnIvd0LfSF63M-mM-TV4",
+    imageUrl: "/images/berawa-2br.webp",
   },
   {
     id: "pick-2",
@@ -54,7 +54,7 @@ export const strategicPicks: StrategicPick[] = [
     insightBadge: "Emerging Zone — Infrastructure Boost",
     insightReason: "New residential community with its own infrastructure: parking, landscaped park area, walking paths and a waterfall",
     features: ["3 Bed", "Jungle View"],
-    imageUrl: "https://lh3.googleusercontent.com/d/1AJeTKGWsVHTtoGyLNHDvRMaAM-2Woi4s",
+    imageUrl: "/images/ubud-3br.webp",
   },
   {
     id: "pick-3",
@@ -65,7 +65,7 @@ export const strategicPicks: StrategicPick[] = [
     insightBadge: "High Yield — Tourist Demand",
     insightReason: "Rising tourist inflows are supporting rental returns of up to 10% for villas in Canggu",
     features: ["2 Bed", "Rice View"],
-    imageUrl: "https://lh3.googleusercontent.com/d/12DHf17yI8SSA-xATzgmhVxI6UTtDn-4a",
+    imageUrl: "/images/canggu-2br.webp",
   },
 ];
 
@@ -111,7 +111,7 @@ export const jtbdTabs: JTBDTab[] = [
       "Full legal due diligence",
       "Capital protection first",
     ],
-    imageUrl: "/images/preserve-capital.jpg",
+    imageUrl: "/images/preserve-capital.webp",
   },
 ];
 

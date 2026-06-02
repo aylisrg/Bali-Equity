@@ -241,7 +241,7 @@ export function ExpertiseSection() {
             </blockquote>
             <div className="flex items-center gap-4">
               <img
-                src="/ceo-photo.jpg"
+                src="/ceo-photo.webp"
                 alt={founderQuote.name}
                 className="h-12 w-12 rounded-full object-cover"
               />

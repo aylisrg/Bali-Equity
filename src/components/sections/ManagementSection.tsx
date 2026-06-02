@@ -27,8 +27,8 @@ function AirbnbDashboard() {
           rel="noopener noreferrer"
         >
           <img
-            src="/airbnb-dashboard.jpg"
-            alt="Portfolio management dashboard"
+            src="/baliluxevillas-profile.webp"
+            alt="Bali Luxe Villas — Superhost profile with 387 reviews and 4.85 rating"
             className="w-full h-auto object-cover"
           />
         </a>
